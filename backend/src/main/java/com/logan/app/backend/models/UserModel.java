@@ -4,10 +4,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity 
 @Data // this generates getters, toString, and more from lombok
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserModel {
     @Id // @Id is an annotation for primitive key
     @GeneratedValue
@@ -21,25 +26,26 @@ public class UserModel {
         return id;
     }
 
-    public Object getName() {
-        return null;
+    public String getName() {
+        return Name;
     }
 
-    public Object getEmail() {
-        return null;
+    public String getEmail() {
+        return Email;
     }
 
-    public Object getPassword() {
-        return null;
+    public String getPassword() {
+        return Password;
     }
 
-    public void setName(Object name2) {
+    public void setName(String name) {
+        this.Name = name;
     }
-
-    public void setEmail(Object email2) {
+    public void setEmail(String email) {
+        this.Email = email;
     }
-
-    public void setPassword(Object password2) {
+    public void setPassword(String password) {
+        this.Password = password;
     }
 
 }
