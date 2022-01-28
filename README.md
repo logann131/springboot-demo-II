@@ -14,3 +14,6 @@ docker run --name mysql1 -e MYSQL_ROOT_PASSWORD=password -d -p 3306:3306 mysql:l
     spring.datasource.password=password
     spring.datasource.url=jdbc:mysql://localhost:3306/mydb
     spring.jpa.hibernate.ddl-auto=update
+
+
+### Source: https://www.youtube.com/watch?v=aYvU0vI_Tg0&t=1523s
