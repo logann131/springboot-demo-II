@@ -5,7 +5,7 @@
 #### Mysql for apple m1
 docker pull --platform linux/amd64 mysql
 #### run mysql image
-docker run --name mysql1 -e MYSQL_ROOT_PASSWORD=password -d -p 3306:3306 mysql:latest
+docker run --name mysql1 -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=mydb -d -p 3306:3306 mysql:latest
 
 ### Make sure springboot-demo-II/backend/src/main/resources/application.properties is filled with:
          
